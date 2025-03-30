@@ -1,0 +1,8 @@
+Flask
+flask-cors
+numpy
+nltk
+scikit-learn
+pickle-mixin
+gunicorn
+re

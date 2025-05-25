@@ -11,21 +11,43 @@ A powerful and scalable Content Moderation System leveraging **Logistic Regressi
   - Trained with curated datasets to identify abusive language, spam, and other violations.  
 
 - **Image Moderation:**  
-  - Supports two models: **YOLOv8** (for object detection) and **CNN** (for content classification).  
-  - Detects nudity, violence, and other inappropriate visual content.  
+  - Supports two models: **ResNet18** (for image classification).  
+  - Detects violence, and other inappropriate visual content.  
 
 - **AWS Deployment:**  
   - Scalable deployment using **AWS Lambda, EC2 , S3  **.  
-  - Integration with **AWS S3** for image storage and retrieval.  
+  - Integration with **AWS S3** for image storage and retrieval.
+  - Use of AWS SageMaker for training and testing image moderation model.
 
 ---
 
-📌 Technologies Used
-Python
-Logistic Regression (sklearn)
-YOLOv8 (ultralytics) / CNN (TensorFlow, Keras)
-AWS (Lambda, EC2, S3)
+
+## 🧰 Tech Stack
+
+| Area         | Tools Used                        |
+|--------------|-----------------------------------|
+| Language     | Python 3                          |
+| Backend      | Flask                             |
+| ML Models    | Logistic Regression, ResNet18     |
+| ML Libraries | Scikit-learn, Torch, OpenCV       |
+| Frontend     | HTML/CSS + JavaScript (basic)     |
+| Cloud        | AWS EC2, S3, SageMaker            |
+
+---
 
 
+##  Machine Learning Models
+
+###  Text Moderation Model
+- **Dataset**: Offensive/non-offensive tweets
+- **Preprocessing**: Tokenization, stopword removal, punctuation removal
+- **Vectorization**: TF-IDF
+- **Classifier**: Logistic Regression
+
+###  Image Moderation Model
+- **Dataset**: Roboflow dataset – Violence vs Non-Violence
+- **Architecture**: Custom **ResNet18**
+- **Training**: Performed in **AWS SageMaker**, optimized for inference
+- **Inference**: Returns label + optionally blurred image
 
 ---
